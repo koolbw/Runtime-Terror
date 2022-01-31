@@ -52,16 +52,21 @@ class MyGame(arcade.Window):
         # self.player_list.append(self.player_sprite)
         self.scene.add_sprite("Player", self.player_sprite)
 
-        """
+
         # Create the ground
         # This shows using a loop to place multiple sprites horizontally
         for x in range(0, 1250, 64):
-            wall = arcade.Sprite(":resources:images/tiles/planetMid.png", TILE_SCALING)
+            wall = arcade.Sprite(":resources:images/tiles/brickTextureWhite.png", TILE_SCALING)
             wall.center_x = x
             wall.center_y = 32
-            # self.wall_list.append(wall)
+            self.scene.add_sprite("Walls", wall)
+        for x in range(0, 1250, 64):
+            wall = arcade.Sprite(":resources:images/tiles/brickTextureWhite.png", TILE_SCALING)
+            wall.center_x = x
+            wall.center_y = 718
             self.scene.add_sprite("Walls", wall)
 
+        """
         # Put some crates on the ground
         # This shows using a coordinate list to place sprites
         coordinate_list = [[512, 96], [256, 96], [768, 96]]
