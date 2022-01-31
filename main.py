@@ -21,7 +21,7 @@ class MyGame(arcade.Window):
     def __init__(self):
 
         # Call the parent class and set up the window
-        super().__init__(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE, resizable=True)
+        super().__init__(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE)
 
         # Our scene object
         self.scene = None
@@ -53,8 +53,7 @@ class MyGame(arcade.Window):
         self.scene.add_sprite("Player", self.player_sprite)
 
 
-        # Create the ground
-        # This shows using a loop to place multiple sprites horizontally
+        # Create the borders
         for x in range(0, 1250, 64):
             wall = arcade.Sprite(":resources:images/tiles/brickTextureWhite.png", TILE_SCALING)
             wall.center_x = x
@@ -142,3 +141,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+    #tiles!
